@@ -61,8 +61,15 @@ app.get('/', (req, res) => {
     </body>
     </html>`
 
+		res.write(htmlEnd)
+
+    componentStream.pipe(
+			res,
+			{ end: false }
+		)
+
     componentStream.on('end', () => {
-        res.write(htmlEnd)
+        // res.write(htmlEnd)
 
         res.end()
     })
