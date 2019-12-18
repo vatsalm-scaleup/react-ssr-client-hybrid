@@ -19,10 +19,15 @@
     "webpack-node-externals": "^1.7.2"
   },
   "devDependencies": {
-    "babel-loader": "^7.1.5"
+    "babel-loader": "^7.1.5",
+    "chai": "^4.2.0",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.15.1",
+    "mocha": "^6.2.2",
+    "react-addons-test-utils": "^15.6.2"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "webpack --config webpack.tests.js && concurrently \"webpack --config webpack.tests.js --watch\" \"mocha --watch\"",
     "dev": "webpack && concurrently \"webpack --watch\" \"nodemon dist\""
   },
   "author": "",

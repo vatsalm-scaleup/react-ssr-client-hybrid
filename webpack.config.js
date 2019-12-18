@@ -45,7 +45,13 @@ const js = {
     output: {
       path: path.resolve(__dirname, 'dist/public'),
       filename: '[name]'
-    }
+		},
+		optimization: {
+      nodeEnv: process.env.NODE_ENV,
+			splitChunks: {
+				chunks: 'all'
+			}
+		}
   }
 
   module.exports = [serverConfig, clientConfig]
