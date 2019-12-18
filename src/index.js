@@ -57,19 +57,12 @@ app.get('/', (req, res) => {
     )
 
     const htmlEnd = `</div>
-      <script src="/static/home.js"></script>
+    <script src="/static/vendors~home.js~multipleRoutes.js"></script>
     </body>
     </html>`
 
-		res.write(htmlEnd)
-
-    componentStream.pipe(
-			res,
-			{ end: false }
-		)
-
     componentStream.on('end', () => {
-        // res.write(htmlEnd)
+        res.write(htmlEnd)
 
         res.end()
     })
@@ -92,7 +85,7 @@ app.get('/with-react-router*', (req, res) => {
       </head>
       <body>
         <div id="root">${component}</div>
-        <script src="/static/multipleRoutes.js"></script>
+        <script src="/static/vendors~home.js~multipleRoutes.js"></script>
       </body>
       </html>
     `

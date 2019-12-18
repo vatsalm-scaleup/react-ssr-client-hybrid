@@ -27,7 +27,7 @@
     "react-addons-test-utils": "^15.6.2"
   },
   "scripts": {
-		"test": "webpack --config webpack.tests.js && concurrently \"webpack --config webpack.tests.js --watch\" \"mocha --watch\"",
+    "test": "webpack --config webpack.tests.js && concurrently \"webpack --config webpack.tests.js --watch\" \"mocha --watch\"",
     "dev": "webpack && concurrently \"webpack --watch\" \"nodemon dist\""
   },
   "author": "",

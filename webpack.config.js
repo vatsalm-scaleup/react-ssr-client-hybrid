@@ -47,6 +47,7 @@ const js = {
       filename: '[name]'
 		},
 		optimization: {
+      nodeEnv: process.env.NODE_ENV,
 			splitChunks: {
 				chunks: 'all'
 			}
