@@ -28,7 +28,9 @@
   },
   "scripts": {
     "test": "webpack --config webpack.tests.js && concurrently \"webpack --config webpack.tests.js --watch\" \"mocha --watch\"",
-    "dev": "webpack && concurrently \"webpack --watch\" \"nodemon dist\""
+    "dev": "webpack && concurrently \"webpack --watch\" \"nodemon dist\"",
+    "build": "webpack",
+    "start": "nodemon dist"
   },
   "author": "",
   "license": "ISC"
